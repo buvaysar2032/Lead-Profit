@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Buttons</title>
+    <style>
+        .block {
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .test {
+            margin: 2px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="block">
+        <button class="test">1</button>
+        <button class="test">2</button>
+        <button class="test">3</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.test').on('click', function(){
+                $(this).parent().append( $('.test')[0] );
+            });
+        });
+    </script>
+
+</body>
+</html>
